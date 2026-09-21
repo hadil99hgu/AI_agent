@@ -5,6 +5,10 @@ from app.models import UpgradeRequest
 from app.agent import handle_message
 from app.models import ChatResponse, ChatRequest
 from app.llm import decide_with_llm
+from app.rag import initialize_rag
+from app.tool import run_agent_with_tools
+
+rag_state = initialize_rag("knowledge")
 
 app=FastAPI()
 
@@ -26,10 +30,13 @@ def upgrade_plan(customer_id : str,request:UpgradeRequest):
 
 @app.post("/chat")
 def chat_with_agent(request: ChatRequest) -> ChatResponse:
-    response = handle_message(
-        request.customer_id,
-        request.message,
-        decision_function=decide_with_llm,
+
+    response = run_agent_with_tools(
+        customer_id=request.customer_id,
+        message=request.message,
+        rag_state=rag_state,
     )
+
+   
 
     return ChatResponse(response=response)

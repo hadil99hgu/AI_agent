@@ -1,4 +1,6 @@
 from pydantic import BaseModel
+from dataclasses import dataclass
+from typing import Any
 
 
 
@@ -16,3 +18,11 @@ class DocumentChunk(BaseModel):
 class RetrievedChunk(BaseModel):
     chunk: DocumentChunk
     score: float
+
+
+@dataclass
+class RAGState:
+    chunks: list[DocumentChunk]
+    vectorizer: Any
+    sparse_vectors: Any
+    document_embeddings: Any
