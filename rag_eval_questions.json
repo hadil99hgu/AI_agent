@@ -1,0 +1,64 @@
+[
+  {
+    "question": "What does Premium include?",
+    "expected_sources": [
+      "01_plan_comparison.md"
+    ]
+  },
+  {
+    "question": "Can I use my phone in France with Plus?",
+    "expected_sources": [
+      "02_roaming_policy.md",
+      "01_plan_comparison.md"
+    ]
+  },
+  {
+    "question": "Can I use my phone abroad?",
+    "expected_sources": [
+      "02_roaming_policy.md"
+    ]
+  },
+  {
+    "question": "What is the difference between roaming and international calls?",
+    "expected_sources": [
+      "13_international_calls.md",
+      "02_roaming_policy.md"
+    ]
+  },
+  {
+    "question": "How long does cancellation take?",
+    "expected_sources": [
+      "05_cancellation_policy.md"
+    ]
+  },
+  {
+    "question": "Why is my first bill unusual?",
+    "expected_sources": [
+      "06_billing_and_payments.md"
+    ]
+  },
+  {
+    "question": "How do I move my eSIM to a new phone?",
+    "expected_sources": [
+      "07_esim_and_sim.md"
+    ]
+  },
+  {
+    "question": "What should I do if my phone was stolen?",
+    "expected_sources": [
+      "10_lost_or_stolen_device.md"
+    ]
+  },
+  {
+    "question": "My phone has no network. What should I try?",
+    "expected_sources": [
+      "11_network_troubleshooting.md"
+    ]
+  },
+  {
+    "question": "Can I downgrade immediately?",
+    "expected_sources": [
+      "04_subscription_changes.md"
+    ]
+  }
+]
